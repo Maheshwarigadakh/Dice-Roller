@@ -5,14 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            background-color: greenyellow;
+        }
         .main-content{
             border: 1px solid black;
             border-radius: 40px;
             box-shadow: 0px 0px 10px 0px black;
-            height: 300px;
+            height: 420px;
             width: 300px;
             display: block;
             margin: 2px auto;
+            background-color: white;
+        }
+        h2{
+         justify-content: center;
+         color: purple;
+         font-weight: 800;
+            font-size: 40px;
+        }
+        #img-disc{
+            height: 200px;
+            width: 200px;
+            margin-left: 50px;
+        }
+        .btn{
+            border: 1px solid black;
+            border-radius: 40px 80px;
+            font-size: 30px;
+            padding: 10px 30px;
+            margin: 30px 90px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -20,7 +43,16 @@
     <div class="main-content">
         <h2>Let's Play Game</h2>
         <img src="default.png" id="img-disc">
-        <button onclick="roll()">Roll</button>
+        <button onclick="roll()" class="btn">Roll</button>
     </div>
+    <script>
+        function roll(){
+            const randNumber = Math.floor(Math.random() * (7-1))+1
+            const imgElement = document.getElementById("img-disc")
+            switch(randNumber){
+                case 1:
+            }
+        }
+    </script>
 </body>
 </html>
